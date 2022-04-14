@@ -19,7 +19,7 @@
        Limit: <%=course.limit || 999 %>,
        Waitlist: <%= course.waiting %>
        <br>
-       Times: <%= times2str(course.times) %>
+       Times: <%= course.strTimes %> <!-- step3 times2str(course.times) to course.strTimes-->
     </div>
     <div class="">
         <em><%=course.details %></em>
