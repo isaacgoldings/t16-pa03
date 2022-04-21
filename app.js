@@ -33,8 +33,8 @@ const courses = require('./public/data/courses20-21.json')
 // *********************************************************** //
 
 const mongoose = require( 'mongoose' );
-const mongodb_URI = 'mongodb://localhost:27017/cs103a_todo'
-//const mongodb_URI = 'mongodb+srv://cs_sj:BrandeisSpr22@cluster0.kgugl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+//const mongodb_URI = 'mongodb://localhost:27017/cs103a_todo'
+const mongodb_URI = 'mongodb+srv://cs_sj:BrandeisSpr22@cluster0.kgugl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
 mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
 // fix deprecation warnings
@@ -308,6 +308,30 @@ app.post('/courses/byInst',
     res.render('courselist')
   }
 )
+//Lucian Did byKey function
+app.post('/courses/byKey',
+  // show courses taught by a faculty send from a form
+  async (req,res,next) => {
+    const key = req.body.keyword;
+   
+    
+    const courses = 
+       await Course
+               .find({independent_study:false})
+               .sort({term:1,num:1,section:1})
+    const results = courses.filter((Course) => {
+        return Course.name.toLowerCase().includes(key.toLowerCase());
+        // Use the toLowerCase() method to make it case-insensitive
+      })
+    
+    //res.json(courses)
+    res.locals.courses = results
+    //res.locals.times2str = times2str
+    res.locals.times2str = results.strTimes //step3
+    //
+    res.render('courselist')
+  }
+)
 
 app.use(isLoggedIn)
 
@@ -383,7 +407,7 @@ app.use(function(err, req, res, next) {
 //  Starting up the server!
 // *********************************************************** //
 //Here we set the port to use between 1024 and 65535  (2^16-1)
-const port = "5000";
+const port = "27017";
 app.set("port", port);
 
 // and now we startup the server listening on that port
