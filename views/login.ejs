@@ -1,4 +1,8 @@
-
+<style>
+    body{
+        font-family:'Courier New', Courier, monospace;
+    }
+  </style>
 
     <div class="row">
       
@@ -8,11 +12,14 @@
                 username: <input type="text"
                                  autocomplete="username"
                                  name="username"><br>
+                                 <br>
                 passphrase: <input  type="password"
                                     autocomplete="passphrase"
                                     name="passphrase"><br>
-                <input type="submit">
-            </form>
+                                    <br>
+                                    <input class="btn btn-primary" type="submit" value="Login">
+                                </form>
+                                <!-- Added by David Pollack (Button) -->
         </div>
       
         <div class="col-sm-2" style="text-align:center">
@@ -22,16 +29,18 @@
         <div class="col-sm-5">
             <h2>Signup</h2>
             <form method="post" action="/signup">
-                username: <input type="text" autocomplete="username" name="username"><br>
+                username: <input type="text" autocomplete="username" name="username"><br> <br>
                 password
-                   <input type="password" autocomplete="passphrase" name="passphrase"><br>
+                   <input type="password" autocomplete="passphrase" name="passphrase"><br> <br>
                 confirm password:
-                    <input type="password" name="passphrase2"><br>
+                    <input type="password" name="passphrase2"><br> <br>
               
-                age: <input type="number" name="age"><br>
+                age: <input type="number" name="age"><br> <br>
               
-              
-                <input type="submit">
+              <br>
+                <input class="btn btn-primary" type="submit" value="Submit">
+                <!-- Added by David Pollack (Button) -->
+
             </form>
         </div>
     </div>
