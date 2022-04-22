@@ -1,7 +1,8 @@
-# CS103a Express App Demo
+# CS103a PA03 App
 
-This is a starter project which has a simple authentication module 
-and provides access to a mongoose database in the cloud.
+This is an app which allows the user to create an account
+to view a mongoose database of all Brandeis courses in the 
+2020-2021 school year, as well as create a schedule of classes.
 
 ## Installation
 Download the project from github and download nodejs and npm from https://nodejs.org
@@ -13,7 +14,7 @@ npm install
 ```
 Start the project with
 ``` bash
-node app.js
+npm start
 ```
 or install nodemon (the node monitoring app) with
 ``` bash
