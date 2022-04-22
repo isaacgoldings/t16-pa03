@@ -28,3 +28,6 @@ nodemon
 ## Videos
 
 David Pollack's video can be seen [here](https://brandeis.zoom.us/rec/share/HFk2NbDPG9EJXz52zXUWzMnFDIJ8fD7fNNX3pTzys1AHE2eq50OfyXy9y4De16y3.iDnsBzZtViYvuxbD?startTime=1650599923000)
+
+Jacob Schireson's video can be seen [here]
+(https://drive.google.com/file/d/1VLxAU-ybWOXcFUUr8i18d0n9_8tbssOW/view?usp=sharing)
